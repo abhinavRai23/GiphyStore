@@ -1,0 +1,2 @@
+# GiphyStore
+Created with CodeSandbox
