@@ -3,22 +3,33 @@ import "./ImgGallery.css";
 
 export default function ImgGallery(props) {
   const { list, loading, error } = props;
-  const [previewItem, updatePreviewItem] = useState("");
+  const [preview, updatePreview] = useState({});
+  const [paused, updatePaused] = useState(false);
 
   const showPreview = (e) => {
     const node = e.target;
-    const src = node.getAttribute("data-preview");
-    updatePreviewItem(src);
+    const gif = node.getAttribute("data-preview-gif");
+    const still = node.getAttribute("data-preview-still");
+    updatePreview({
+      gif,
+      still
+    });
   };
 
   const handleClose= () => {
-      updatePreviewItem('');
+      updatePaused(false);
+      updatePreview({});
+  }
+
+  const playPauseGif = (e) => {
+    e.stopPropagation();
+    updatePaused(!paused);
   }
 
   useEffect(() => {
     const close = (e) => {
       if(e.keyCode === 27){
-        updatePreviewItem('')
+        handleClose()
       }
     }
     window.addEventListener('keydown', close)
@@ -33,15 +44,16 @@ export default function ImgGallery(props) {
             <img
               src={item.images.preview_webp.url}
               alt={item.title}
-              data-preview={item.images.original.webp}
+              data-preview-gif={item.images.original.url}
+              data-preview-still={item.images.original_still.url}
             />
           </div>
         ))}
       </div>
-      {previewItem && (
+      {preview.gif && (
         <div className="image-preview" onClick={handleClose}>
           <div className="display-section">
-            <img src={previewItem} alt="Preview not available for this gif :(. Try another one :p" onClick={(e)=>e.stopPropagation()}/>
+            <img src={preview[paused?'still':'gif']} onClick={playPauseGif} alt="Preview not available for this gif :(. Try another one :p"/>
           </div>
           <div className="close" onClick={handleClose}>X</div>
         </div>
