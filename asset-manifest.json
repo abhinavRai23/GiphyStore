@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/GiphyStore/static/css/main.7d3474a6.css",
-    "main.js": "/GiphyStore/static/js/main.cc3b1f49.js",
+    "main.css": "/GiphyStore/static/css/main.78d4ec62.css",
+    "main.js": "/GiphyStore/static/js/main.9a8ac8b0.js",
     "index.html": "/GiphyStore/index.html",
-    "main.7d3474a6.css.map": "/GiphyStore/static/css/main.7d3474a6.css.map",
-    "main.cc3b1f49.js.map": "/GiphyStore/static/js/main.cc3b1f49.js.map"
+    "main.78d4ec62.css.map": "/GiphyStore/static/css/main.78d4ec62.css.map",
+    "main.9a8ac8b0.js.map": "/GiphyStore/static/js/main.9a8ac8b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d3474a6.css",
-    "static/js/main.cc3b1f49.js"
+    "static/css/main.78d4ec62.css",
+    "static/js/main.9a8ac8b0.js"
   ]
 }
