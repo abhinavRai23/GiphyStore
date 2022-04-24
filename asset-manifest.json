@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GiphyStore/static/css/main.7d3474a6.css",
+    "main.js": "/GiphyStore/static/js/main.cc3b1f49.js",
+    "index.html": "/GiphyStore/index.html",
+    "main.7d3474a6.css.map": "/GiphyStore/static/css/main.7d3474a6.css.map",
+    "main.cc3b1f49.js.map": "/GiphyStore/static/js/main.cc3b1f49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d3474a6.css",
+    "static/js/main.cc3b1f49.js"
+  ]
+}
