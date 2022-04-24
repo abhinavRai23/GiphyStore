@@ -2,8 +2,9 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: #222;
+    background-color:rgba(0, 0, 0, 0.90);
     top:0;
+    left: 0;
     overflow: hidden;
 }
 
@@ -17,8 +18,8 @@
 .close {
     color: #fff;
     position: absolute;
-    top: 32px;
-    right: 32px;
+    top: 5%;
+    right: 5%;
     font-weight: bold;
-    font-size: 24px;
+    font-size: calc(2rem);
 }

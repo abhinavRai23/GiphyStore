@@ -1,20 +1,20 @@
 import React from 'react';
 import {ThemeContext} from '../ThemeContext';
-import './style.css';
+import './ThemeTogglerButton.css';
 
 function ThemeTogglerButton() {
   return (
+    <div className='themeButton'>
     <ThemeContext.Consumer>
       {({theme, toggleTheme}) => (
         <button
           onClick={toggleTheme}
-          className="themeButton"
-        >{
-            theme === 'dark' ? 'Ligth Mode' : 'Night Mode'
-          }
+          className={`${theme==='dark'?'sun': 'moon'}`}
+        >Switch
         </button>
       )}
     </ThemeContext.Consumer>
+    </div>
   );
 }
 

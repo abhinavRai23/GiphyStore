@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Limit } from "./apis";
-import "./styles.css";
+import "./App.css";
 import useFetch from "./useFetch";
 import {ThemeContext} from './ThemeContext';
 import ThemeTogglerButton from "./ThemeTogglerButton";
@@ -31,7 +31,7 @@ export default function App() {
   const option = {
     root: null,
     rootMargin: "20px",
-    threshold: 1
+    threshold: 0.75
   };
   const handleObserver = useCallback((entries) => {
     const target = entries[0];
@@ -47,7 +47,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{theme: theme, toggleTheme: toggleTheme}}>
       <div className="App">
-        <h3>Trending Giphy</h3>
+        <h2>Trending Giphy</h2>
         <SearchSection  query={query} handleChange={handleChange}/>
         <ThemeTogglerButton />
         <ImgGallery list={list} loading={loading} error={error}/>

@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import "./styles.css";
+import "./ImgGallery.css";
 
 export default function ImgGallery(props) {
   const { list, loading, error } = props;

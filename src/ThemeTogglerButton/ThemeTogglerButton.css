@@ -1,0 +1,130 @@
+.themeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+  }
+  
+  html, body {
+    --main-color: #FF9636;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  #target {
+    position: relative;
+    left: 0px;
+    transition: all .3s ease-in-out;
+  }
+  
+  .toggle {
+    left: calc(100% - 50px) !important;
+  }
+  
+  .sun {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFDB73;
+    position: relative;
+  }
+  
+  .sun::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFDB73;
+    opacity: .5;
+  }
+  
+  .sun::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #FFDB73;
+    opacity: .3;
+  }
+  
+  .moon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0A515B;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .moon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0A515B;
+    opacity: .5;
+  }
+  
+  .moon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #0A515B;
+    opacity: .3;
+  }
+  
+  .moon > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .moon > div::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFE4BF;
+    z-index: 1;
+  }
+  
+  .moon > div::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0A515B;
+    z-index: 2;
+  }

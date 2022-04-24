@@ -1,3 +1,5 @@
+import './SearchSection.css';
+
 export default function SearchSection({
     query,
     handleChange

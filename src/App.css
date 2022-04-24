@@ -19,11 +19,11 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  padding: 20px;
 }
 
 .photo-container {
   line-height: 0;
-  column-count: 5;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -33,4 +33,13 @@
   width: auto !important;
   height: 175px !important;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .photo-container{
+    justify-content: space-evenly;
+  }
+  .photo-container img {
+    height: 150px !important;
+  }
 }
