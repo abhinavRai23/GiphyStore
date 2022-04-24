@@ -32,7 +32,7 @@ function useFetch(query='', offset=0) {
       url = TrendingApi
     }
     if(total>offset){
-      optimizedFetch(sendQuery,url, query, offset)
+      optimizedFetch(sendQuery,url, offset, query)
     }
   }, [query, offset]);
 
