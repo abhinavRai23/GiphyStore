@@ -1,3 +1,16 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background: #FFF;
+    color: #333;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #FFF;
+  }
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -6,31 +19,13 @@
 .photo-container {
   line-height: 0;
   column-count: 5;
-  column-gap: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .photo-container img {
-  width: 100% !important;
-  height: auto !important;
-}
-
-@media (max-width: 1200px) {
-  .photo-container {
-    column-count: 4;
-  }
-}
-@media (max-width: 1000px) {
-  .photo-container {
-    column-count: 3;
-  }
-}
-@media (max-width: 800px) {
-  .photo-container {
-    column-count: 2;
-  }
-}
-@media (max-width: 400px) {
-  .photo-container {
-    column-count: 1;
-  }
+  width: auto !important;
+  height: 175px !important;
+  margin-top: 20px;
 }
