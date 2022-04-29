@@ -1,5 +1,8 @@
 import {useState, useEffect} from 'react';
 import "./ImgGallery.css";
+import { MasonryContainer } from './masonry';
+
+let brakePoints = [350, 500, 750];
 
 export default function ImgGallery(props) {
   const { list, loading, error } = props;
@@ -38,17 +41,11 @@ export default function ImgGallery(props) {
 
   return (
     <>
-      <div className="photo-container" onClick={showPreview}>
-        {list.map((item) => (
-          <div key={item.id}>
-            <img
-              src={item.images.preview_webp.url}
-              alt={item.title}
-              data-preview-gif={item.images.original.url}
-              data-preview-still={item.images.original_still.url}
-            />
-          </div>
-        ))}
+      <div onClick={showPreview}>
+        <MasonryContainer 
+          list={list}
+          brakePoints={brakePoints}
+        />
       </div>
       {preview.gif && (
         <div className="image-preview" onClick={handleClose}>
