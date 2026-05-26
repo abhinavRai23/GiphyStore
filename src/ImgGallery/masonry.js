@@ -19,11 +19,18 @@ export class MasonryContainer extends React.Component{
 }
 
 const Tile = ({item}) => {
+  const thumbnail = item.images.fixed_width.webp
+		|| item.images.downsized_medium.url
+		|| item.images.original.url;
+  const thumbnailWidth = item.images.fixed_width.width
+		|| item.images.downsized_medium.width
+		|| item.images.original.width;
+
   return (
     <div className="tile">
 		<img
-			width={item.images.preview_webp?.width}
-			src={item.images.preview_webp?.url}
+			width={thumbnailWidth}
+			src={thumbnail}
 			alt={item.title}
 			data-preview-gif={item.images.original.url}
 			data-preview-still={item.images.original_still.url}
